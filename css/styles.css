@@ -15,6 +15,12 @@ body {
     line-height: 1.6;
     background: var(--background);
     color: var(--text);
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -215,6 +221,8 @@ img {
     border: 1px solid rgba(56, 189, 248, 0.35);
     border-radius: 12px;
     transition: border-color 0.3s ease;
+    max-width: 100%;
+    height: auto;
 }
 
 img:hover {
@@ -249,6 +257,26 @@ footer {
 
     #about .col-lg-6 a {
         justify-content: center;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
